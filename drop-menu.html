@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body, div, dl, dt, dd, ul, ol, li,
+        h1, h2, h3, h4, h5, h6, pre, p, blockquote,
+        form, fieldset, input, textarea, th, td {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            width: 960px;
+            margin: 0px auto; /* margin-top:0px;
+                                 margin-bottom: 0px;
+                                 margin-right: auto;
+                                 margin-left: auto; */
+        }
+
+        #nav {
+            list-style: none;
+            font-weight: bold;
+            float: left;
+            width:100%;
+            margin-bottom: 10px;
+        }
+
+        #nav li { 
+            float:left;
+            margin-right: 10px;
+            position: relative;
+        }
+
+        #nav a {
+            display: block;
+            padding: 5px;
+            color: #fff;
+            background: #333;
+            text-decoration: none;
+        }
+
+        #nav a:hover {
+            color: #fff;
+            background: #6b0c36;
+            text-decoration: underline;
+        }
+
+        #nav ul {
+            background: rgba(255,255,255,0);
+            list-style: none;
+            position: absolute; /* within nav */
+            display: none;
+        }
+
+
+        #nav ul li {
+            padding-top: 1px;
+            float:none; 
+        }
+
+        #nav ul li a {
+            white-space: nowrap;
+        }
+
+        #nav li:hover ul {
+            display: block;
+        }
+
+        #nav li:hover a {
+            background: #0c6b0c;
+            text-decoration: underline;
+        }
+
+        #nav li:hover ul a {
+            text-decoration: none;
+        }
+
+        #nav li:hover a:hover {
+            text-decoration: none;
+        }
+
+
+    </style>
+
+<!--[if gte mso 9]><xml>
+<mso:CustomDocumentProperties>
+<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">WEBD1000/3449/Website Development(B)/Andrews,Darren Members</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
+<mso:SharedWithUsers msdt:dt="string">7;#WEBD1000/3449/Website Development(B)/Andrews,Darren Members</mso:SharedWithUsers>
+</mso:CustomDocumentProperties>
+</xml><![endif]-->
+</head>
+<body>
+    <ul id="nav">
+        <li><a href="">Link 1</a></li>
+        <li><a href="">Link 2</a>
+            <ul>
+                <li><a href="">Link 2A</a></li>
+                <li><a href="">Link 2B</a></li>
+            </ul>
+        </li>
+        <li><a href="">Link 3</a>
+            <ul>
+                <li><a href="">Link 3A</a></li>
+                <li><a href="">Link 3B</a></li>
+            </ul>
+        </li>
+    </ul>    
+</body>
+</html>

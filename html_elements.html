@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			body {
+				border:  5px solid black;
+				font-size: 1.5em;
+				background: #b8d6d9;
+			}
+			body > article {
+				border: 3px solid red;
+				background: #cab8d9;
+			}
+			article > section {
+				border: 1px dashed blue;
+				background: #d9b8c1;
+			}
+			footer {
+				background: #d3d9b8;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>Welcome to HTML Page Elements</h1>
+			<nav>
+				<a href="www.nscc.ca">Menu Item 1</a>
+				<a href="www.nscc.ca">Menu Item 2</a>
+				<a href="www.nscc.ca">Menu Item 3</a>
+			</nav>
+		</header>
+
+		<!-- An article tag should be used to mark a piece of content that could be independently distributable -->
+		<article>
+			<!-- Section tags can be used to indicate multiple sections of related content within an article. A section however couldn't be independently distributable like an article -->
+			<section>
+				<header>
+					<h2>Sectioning Elements</h2>
+				</header>
+			</section>
+			<section>
+				<h3>Basics of Sectioning Elements</h3>
+				<h4>Sectioning elements help us to map out the core pieces of our website. We can think of sectioning elements as containers that will contain site content</h4>
+			</section>
+			<section>
+				<h3>Examples of Sectioning Element tags</h3>
+				<h4>&lt;address&gt;, &lt;article&gt;, &lt;aside&gt;, &lt;body&gt;, &lt;footer&gt;, &lt;h1-h6&gt;, &lt;header&gt;, &lt;nav&gt;, &lt;section&gt;</h4>
+			</section>
+		</article>
+
+		<article>
+			<section>
+				<header>
+					<h2>Grouping Elements</h2>
+				</header>
+			</section>
+			<section>
+				<h3>Basics of Grouping Elements</h3>
+				<h4>Grouping elements are contained within sectioning elements</h4>
+				<h4>For example, a list of items showing different grouping element tags</h4>
+				<ul>
+					<li>&lt;ol&gt; for an ordered list of items</li>
+					<li>&lt;ul&gt; for an unordered list of items</li>
+					<li>&lt;p&gt; for text of a paragraph</li>
+					<li>&lt;blockquote&gt; for a quotation, often used with a citation</li>
+				</ul>
+			</section>
+		</article>
+		<article>
+			<section>
+				<header>
+					<h2>Text-Level Elements</h2>
+				</header>
+			</section>
+			<section>
+				<h3>Basics of Text-Level Elements</h3>
+				<p>Text-level elements are distinct from sectioning and grouping elements because they are known as "inline" elements. They are embedded within the content of other elements</p>
+				<p>Take this paragraph for example. I can inject <b>different</b> text-level <code>elements</code> to <em>achieve</em> different <sup>effects</sup></p>
+			</section>
+		</article>
+		<footer>
+			<address>319 Example Address, Yarmouth, NS. B5A 5P0</address>
+		</footer>
+	</body>
+</html>

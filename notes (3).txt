@@ -1,0 +1,964 @@
+Terminology
+
+Network => series of interconnected computers
+
+Server => computer that provides a service or data 
+to another computer
+
+Client => a computer that uses/accesses data or 
+services from a Server
+
+LAN => Local Area Network (home office or home)
+
+WAN => Wide Area Network (Eastlink, verision, bell)
+
+Hypertext => Links to other web pages
+
+-------------------
+
+Elements (Tags) are html building blocks with 
+specific purpose. 
+
+IMG => images
+P => paragraph
+B => Bold text
+div => Block 
+
+<p>This is my Text</p>
+<img src="image.png" alt="image" />
+<img src="image.png" alt="image"></img>
+
+If there is no text/element wrapped within
+your html tags (br, img, hr), you can 
+omit the closing tag and add the / to the 
+opening (self-terminating element).
+
+<element prop1="value" prop2="value">
+    My text
+</element>
+
+<element prop1="value" prop2="value" />
+
+Common Properties/Attributes
+
+class => classification (commonly) used
+         to apply a custom style
+
+hidden
+
+id => (unique identifier). Can be used to 
+         apply a custom style
+
+lang => language of content within element
+
+style => custom styles applied to this 
+         element (inline-style)
+
+tabindex => order of tabbing
+
+title => descriptor of the element
+
+alt => alternative description of the element 
+       (accessibility features/SEO)
+
+
+"WHITE SPACES" in html
+By default, browsers ignore "extra" spaces/line breaks
+meant to make your code more easily read.
+E.G. "This
+      is     
+      my     
+      text."
+Shows as: "This is my text." (BY DEFAULT)
+
+
+Structure of the Document Head
+<head></head>
+
+head => contains page information
+link => extra loaded files such as JS and CSS
+script => javascript code 
+style => properties that control display of Elements
+title => page title, displayed in browser bar
+meta => descriptive information about page, directives
+
+--------------------------
+
+HTML Page Elements (Layouts/Sections)
+
+body    - entire content of display'
+
+div     - block of code you can style (HTML4)
+        - used in bootstrap (responsive library)
+        - REACT
+
+main    - main content of the page (only one)
+
+header  - opening area for the site
+
+nav     - navigation links go here 
+
+footer  - closing area for the site
+
+section - content that should be grouped
+
+article - content within section (grouping)
+
+aside - usually a sidebar
+
+address - contact info
+
+-----------------------
+
+Text Elements ( <element>    </element>  )
+
+p   Text of a paragraph (separation via padding)
+NOTE: you can't start another p within the body of
+      the current paragraph 
+
+
+pre   Text of a paragraph retaining formatting
+
+
+span  styled text within a paragraph
+NOTE: you can't start another span within the body of
+      the current span 
+
+b, strong   bold text <b>title</b> <strong>title</strong>
+NOTE: strong important for SEO
+
+i, em       emphasized (italicized) text
+
+u           underline text
+
+s, del, ins     strikethrough, deleted, inserted
+
+sub, sup        subscript, superscript
+
+abbr        abbreviation
+
+cite        citation
+
+blockquote      indented block of text
+
+q           quoted text from another source
+
+-------------------------------
+
+<!--    this is a html comment    -->
+/*      this is a css comment     */
+
+Embedded Elements
+
+img      a graphic image retrieved from 
+         an image file
+
+<img src="filename" alt="text" />
+
+
+audio     a sound clip or audio stream
+
+<audio controls>
+   <source src="file" type="audio/mp3" />
+   Your browser does not support audio
+</audio>
+
+CODECS => encoding styles for audio/video 
+MP3/WAV/OGG are common for audio
+OGG is not supported by safari
+
+
+video     a video clip/stream
+<video controls>
+   <source src="file" type="audio/mp4" />
+   Your browser does not support video
+</video>
+
+
+canvas     scripts to dynamically contruct
+            bitmap images and graphics
+
+embed       embdedded content (html)
+
+iframe      show the contents of external
+            web site
+
+IFrame commonly used for phishing, 
+serving malware via JS,
+hijack keystrokes/clicks.
+Breaks the "back" button
+SEO problems
+
+object    generic type used for various
+          embedded data types
+
+HTML Special Characters
+
+&nbsp;    non-breaking space
+&copy;    copyright symbol
+&quot;    quotation mark
+&apos;    apostrophe
+&amp;     ampersand
+&lt;      less-than symbol
+&gt;      greater-than symbol 
+
+--------------------------
+additional options for form controls and fields
+(pseudo-classes)
+
+selected    A dropdown option that is pre-selected
+disabled    A control that has been disabled
+enabled     A form control that has been enabled
+focus       A field that has been actively selected
+required    A field that is required or form 
+            does not submit
+checked     A checkbox that has been pre-checked
+
+------------------------------------------
+
+ORGANIZING YOUR FILES
+
+ABSOLUTE PATHS VS RELATIVE PATHS
+
+From Layout example...
+<img src="red-roses.jpg" alt="roses" height="100" />
+This is an example of a relative path. If a linked
+file has no slashes in front, it means the file is 
+in the same folder as your html file (current file).
+
+Absolute paths on PC start with the drive letter
+C:\Users\Account\Documents\.....\red-roses.jpg
+BAD IDEA UNLESS your linked resources is not on 
+your Server (use full URL to the resource)
+
+Absolute paths on macs/linux start with '/'
+If you are serving your files in a web server,
+'/' means go to root folder of the web server.
+If you are not using a server, it is root of file
+system.
+
+BAD IDEA BECAUSE if you have to move your folder,
+you have to update every single linked resource 
+that uses an absolute path
+
+Relative paths use your current file's folder as 
+starting point.
+no slash => same folder
+./ => same folder as current file
+../filename => file is up one folder relative to current
+../folder/filename => back one folder, enter new folder
+                      find filename
+../../images/thumbnails/tn_flower.jpg
+      up 2, enter images, enter thumbnails, find file
+
+images/flower-pot.jpg => current folder, enter images
+                         find file
+
+--------------------------------------
+
+HTML only defines a document's content and Structure
+not how it should be displayed
+
+Appearance of page is determined by the Cascading 
+Style Sheets language (CSS).
+
+Types of style sheets 
+1. browser / user agent styles
+   Built into the browser itself (default padding
+   we see on certain elements - e.g. lists) 
+
+2. user-defined styles
+   Accessibility settings (alter browser defaults)
+
+3. external styles      
+   externally linked CSS files (within head section)
+
+4. embedded styles 
+   In head, <style></style>
+
+5. inline styles
+   styles on elements themselves <= try to avoid
+
+--------------------------
+
+CSS styles
+
+selector {
+   property1: value1;
+   property2: value2;
+   ....
+}
+
+The selector identifies an element or group 
+of elements within the document. The property/
+value pairs specify the style property and value
+applied to the selector
+ 
+https://www.w3schools.com/cssref/css_selectors.php
+
+class selector
+
+.red-text {
+   color: red;
+}
+
+p {
+   color: red; <= All text in all p will be red
+}
+
+<p class="red-text">some text</p>
+<p style="red-text">some text</p>
+
+
+.class1.class2 (chained selector)
+
+.header.red-text {
+   font-weight: 800;
+}
+
+<p class="header red-text">some text</p>
+
+
+
+.header   .red-text {
+   font-weight: 800;
+}
+apply this style to all classes header
+that has a decendant with class red-text
+           ---------
+
+<p class="header">
+   some <span class="red-text">text</span>
+</p>
+
+you can also use html elements as the css_selectors
+
+section   h1 {
+   margin-left: 0px;
+}
+a left margin of 0px is applied to all Sections
+that contain a h1 element as a decendant
+
+
+ids <= unique identifier for an element on page
+    <= There can be only one!!!
+
+#address-label {
+   width: 100px;
+   height: 20px;
+   color: purple;
+}
+<label id="address-label">Address</label>
+
+p, h1, span, .size-12, #alert  {
+   font-size: 12px;
+}
+a size of 12px will be applied to all paragraphs,
+all h1 elements, all spans, all elements with 
+the "size-12" class, and the element with the 
+"alert" id
+
+p h1 span .size-12 #alert  {
+   font-size: 12px;
+}
+
+section p {
+}
+apply to all p that appear within the section element
+
+section > p {
+}
+apply style to all p whose parent is a section element
+
+<section>
+   <p>My text<span>!</span></p>
+</section>
+
+section
+   |
+   |
+   ---p
+      |
+      |------span
+
+paragraph gets style because section is parent
+in hierarchy (DOM)
+
+<section>
+   <article>
+      <p>My text<span>!</span></p>
+   </article>
+</section>
+
+section
+   |
+   -------article
+            |
+            ---p
+               |
+               |------span
+
+paragraph does not gets style because article is parent
+in hierarchy (DOM)
+
+section + p {
+}
+apply to those paragraphs that appear immediately after section
+
+<section>
+   <p>hello<span>!</span></p> <= only this gets style applied
+   <p>my name is darren</p>
+</section>
+
+<section>
+   <h1>Title</h1>
+   <p>hello<span>!</span></p> <= does not get style applied
+   <p>my name is darren</p>
+</section>
+
+--------------------------------
+
+CSS colors
+
+Support for 147 common color names:
+red, blue, black, lightblue
+
+CSS supports 2 types of color values:
+RGB => classic color theory in which all colors
+         are made of red, green, blue shades
+         0 => absent
+         255 => maximum
+
+white (255, 255, 255)
+black (0, 0, 0)
+
+RGB values are more often rendered in hexadecimal
+format (0-9, A-F) (base 16 numbering)
+255 is FF in hexadecimal
+0 is 00 in hexadecimal
+
+rgb(255, 255, 255) is #FFFFFF => #FFF 
+rgb(0, 0, 0) is #000000 => #000
+
+rgb(100%, 100%, 0%) #FFFF00
+
+opacity (opaque-ness) aka transparency
+rgba(0, 0, 0, .5) => black 50% transparency
+
+HSL is alternative to RGB. each color is 
+determined by its hue, saturation, and lightness.
+
+Hue is direction on a color wheel, 
+saturation is intensity (0-100%)
+lightness is brightness (0-100%) 0 black, 100 white
+
+hsla(hue, saturation, lightness, opacity)
+
+HSL is new to CSS so may not be supported by all
+browsers, so you still have to provide fallback
+to rgb
+
+html {
+   background-color: rgb(255, 255, 255);
+   background-color: hsl(120, 72%, 72%);
+}
+
+===============================================
+
+Typography
+
+5 major font groups:
+
+serif - "tailing" fonts
+
+san-serif - "without tailing" fonts
+
+monospace - each letter takes up same width
+
+cursive - mimics handwriting
+
+fantasy - wing-dings, symbols, etc (ornamental)
+
+Caution => choose a font to use is problematic. 
+You do not know what fonts are used on user's 
+computer, nor how their browser renders the font.
+
+Keep choice generic. Use Web font if you want a 
+specific font.
+
+Web fonts => There are some that universally supported
+          => Ways of downloading the font definition
+TTF (TrueType font) => Edge, Firefox, Chrome, Safari, 
+                       Opera
+OTF (OpenType font) => same
+WOFF (Web Open Font Format) => same
+
+Always check license before using an external font
+
+@font-face {
+   font-family: MyriadPro-Bold;
+   src: 
+url('fonts/woff/MyriadPro-Bold.woff') format('woff'),
+url('font/ttf/MyriadPro-Bold.ttf') format('truetype');
+   font-weight: bold;
+}
+
+h1, h2 {
+   font-family: 
+      MyriadPro-Bold, Verdana, Helvetica, sans-serif;
+}
+
+Google Font (google.com/fonts)
+
+<link href="http://fonts.googleapis.com/
+           css?family-Monoton" rel="stylesheet" />
+
+h1, h2 {
+   font-family: 
+      Monoton, Verdana, Helvetica, sans-serif;
+}
+
+
+Font Sizes
+
+print media => mm, cm, in, pt (points), pc (picas)
+
+body {
+   font-size: 12pt;
+}
+
+For web, relative size and absolute size units are 
+applied.
+
+you can define size by # pixels the font takes up
+
+body {   font-size: 12px;  }
+
+Typically, most browsers use base font size of 16px 
+to the body text with slightly larger sizes for 
+h1, h2, h3. Slightly smaller for h4, h5, h6
+
+default size for h1 is 32px
+
+h1 { font-size: 200%; }
+h1 { font-size: 2em; } => 1em = 16px (base font size)
+
+.75em => 12px;
+.5em => 8px;
+
+body {
+   font-size: 12px;
+}
+.75em => 9px;
+.5em => 6px;
+
+rem => relative size to the parent of the block 
+       you are in.
+
+
+Viewpoint units => length as a % of the width or 
+                    height of the browser window
+
+1vw => 1% of the browser width
+1vh => 1% of the browser height
+
+1vmin => 1vw or 1vh (whichever is smaller)
+1vmax => 1vw or 1vh (whichever is larger)
+
+Font Size Keywords
+   xx-small 9px
+   x-small 10px 
+   small 13px
+   medium 16px <= default browser size
+   large 18px
+   x-large 24px
+   xx-large 32px
+
+Recommendation for accessibilty => use rem units 
+  and avoid setting the font-size explicity for 
+  html element
+
+Kerning (space between characters)
+   letter-spacing: value;
+   line-height: 2em; <= double-spaced text
+
+Indent first line
+   text-indent: size;
+
+Font style
+   font-style: type; <= normal, italic, oblique
+
+Font Thickness
+   font-weight: weight; <= bold,normal,bolder,lighter
+                           100, 200, ..., 800, 900
+
+Decorated Text
+   text-decoration: type;  none, underline, overline, 
+                           line-through
+
+Case of Text
+   text-transform: type; <= capitalize, uppercase, 
+                            lowercase, none
+
+Small-caps
+   font-variant: type; <= normal, small-caps
+
+Align text within an element
+   text-align: value; <= left, right, center, justify
+   vertical-align: value; <= baseline, bottom, middle,
+                             sub, super, text-bottom,
+                             text-top, top, %
+
+Combo style:
+   font: style variant weight size/height family;
+   font: 15px Arial, sans-serif;
+
+=============================================
+
+Formatting lists
+
+Default browser style for both UL and OL is to 
+display a symbol beside each list marker.
+OL uses numerals
+UL uses dots, squares
+
+list-style-type: type;
+none, disc, circle, square
+decimal, decimal-leading-zero
+lower-alpha, upper-alpha, lower-roman, upper-roman
+lower-greek, upper-greek
+
+ol { list-style-type: upper-alpha; }
+
+<ol>
+   <li>Home</li>
+   <li>Products
+      <ol>
+         <li>Product 1</li>
+         <li>Product 2</li>
+         <li>Product 3</li>
+      </ol>
+   </li>
+   <li>About Us
+      <ol>
+         <li>Team
+               <ol>
+                  <li>Person 1</li>
+                  <li>Person 2</li>
+                  <li>Person 3</li>
+               </ol>
+         </li>
+         <li>Address</li>
+         <li>Contact</li>
+      </ol>
+   </li>
+</ol>
+
+ol { list-style: upper-roman; }
+ol ol { list-style: upper-alphabetical; }
+ol ol ol { list-style: decimal; }
+
+list-style-position: value; <= outside, inside
+
+Combo
+   list-style: type image position;
+
+   ul { list-style: circle url(arrow.png) inside; }
+
+====================================
+
+div {
+   width: 300px;
+   height: auto; /* assumed */
+   padding: 50px;
+   margin: 20px;
+   border: 15px solid green;
+}
+
+Content box is 300px wide and tall enough to 
+display the html content inside the box
+
+<div>
+   <h1>Header Text</h1>
+   <p>non-header text</p>
+   non paragraph text
+</div>
+
+Total size of div on screen is: 430px
+
+Display Width => 300px + 50px(LPad) + 50px(RP) 
+                       + 15px(LBord) + 15px(RB) 
+              => 430px
+
+BUT it is placed 20px away from content that 
+surrounds it
+
+Display Height => 136px + 50px(TP) + 50px(BPad)
+                       + 15px(TopBord) + 15px(BB)
+              => 266px 
+
+Defining padding:
+   padding-left: size; e.g. 10px
+   padding-top: size;  
+   padding-right: size;
+   padding-bottom: size;
+
+combo styles:
+   padding: size; => padding: 20px; applies to all 4
+   padding: top/bottom left/right; padding: 5px 10px;
+   padding: top left/right bottom; padding: 5px 20px 5px;
+   padding: top right bottom left; 
+
+Defining margin:
+   margin-left: size; e.g. 10px
+   margin-top: size;  
+   margin-right: size;
+   margin-bottom: size;
+
+combo styles:
+   margin: size; => margin: 20px; applies to all 4
+   margin: top/bottom left/right; margin: 5px 10px;
+   margin: top left/right bottom; margin: 5px 20px 5px;
+   margin: top right bottom left; 
+
+Defining border-width:
+   border-left-width: size; e.g. 10px
+   border-top-width: size;  
+   border-right-width: size;
+   border-bottom-width: size;
+
+combo styles:
+   border-width: size; => border-width: 20px; applies to all 4
+   border-width: top/bottom left/right; border-width: 5px 10px;
+   border-width: top left/right bottom; border-width: 5px 20px 5px;
+   border-width: top right bottom left; 
+
+Can also use thin, medium, thick as size definitions
+
+There are 2 other settings you need to set for borders
+border-style, border-color
+BORDER-STYLE must be declared before others
+
+Border Style can be dotted, dashed, double, solid
+Border color can be any accepted CSS color
+Like above, each can accept 1, 2, 3, or 4 values
+in declaration (all, T/B, L/R, etc). 
+W3Schools for syntax for each
+
+Combo style for border that encompasses width, color
+and style.
+
+border: solid; <= sets style
+                  width=medium, color same as text
+
+border: solid red; <= sets style and color 
+                      width defaults to medium
+
+border: 5px solid; <= sets width and style
+                      color same as text
+
+border: 5px solid red; <= width set to 5px 
+                          style to solid, color is red
+
+Page Layout Style
+   Define the display style for any page element
+
+display: value;
+
+none     Do not display
+block    Display as a block (on own line)
+inline   Treated as in-line within a block   
+         Can have content on left/right as long
+         as there is space to show it
+inline-block
+table    Display as a web-table
+inherit  Inherit the diplay property of parent
+
+
+Page Layout Design
+
+=> concerned about the available screen width
+=> it is bad form to make the users scroll horizontally
+
+Range: >= 1680px down to <= 320px
+      even at 320px, you may have scroll bars taking
+      space
+
+
+Fixed, Fluid, Elastic Layouts
+
+4 general categories on Layouts
+
+Fixed => size of screen and each element inside 
+         are absolutely set (fixed)
+
+Fluid => widths of each element is set as percentage
+         of available screen width
+
+Elastic => all measurements expressed in em units
+
+Responsive => change layout/design based on the 
+              device viewing it. Different style 
+              properties loaded depending on screen
+              resolution @media()
+
+height/width
+
+height: value;
+width: value;
+
+html {
+   width: 100%;
+}
+body {
+   width:95%;
+   min-width: 640px;
+   max-width: 960px;
+   min-height: 100%;
+   margin-left: auto;
+   margin-right: auto;
+}
+body will take up 95% of screen but will not 
+be smaller than 640px and not grow larger than 960px;
+
+margin-left:auto; 
+margin-right:auto; 
+will center your block with the parent
+
+Centering an element vertically
+=> not as easily because the block usually only
+   grows vertically enough to show the content
+   within. You would have to set a height property
+   on the parent that exceeds the vertical height 
+   of the child and then set the vertical-align 
+   property
+
+Floating Page content
+
+By default, content is displayd on the page in the
+order it appears in the HTML file. Floating an 
+element takes it out of its position and places it 
+at the left or right edge of the parent element.
+
+float: value;
+
+none     default (blocks alone on line/row)
+
+left     float the object to left of parent 
+         content can display to right of element
+
+right    float the object to right of parent 
+         content can display to left of element
+ 
+Clear a float
+
+clear: value;
+
+left => no content is allowed to the left of element
+        (moves it down)
+right => any content that follows will be moved down
+
+both => default nature of the block 
+        (nothing to left, nothing to right)
+
+==================================
+
+a floated element is removed from the DOM (document 
+flow) so it floats free of its container. If every
+element with a block is floated, it has no height
+within your browser. This is known as container
+collapse
+
+fix:
+container:::after {
+   clear: both;
+   content: "";
+   display: table;
+}
+
+Positioning elements
+5 styles:
+
+position: type; (5 types)
+top: value; <= coordinates
+left: value;
+right: value;
+bottom: value;
+
+CSS supports 4 kinds of positions
+
+static (default) => element is positioned one after 
+the other as they appear within a block. 
+Browsers ignore static elements's left, right, top,
+bottom positions
+
+relative => top, right, bottom and left properties 
+            indicate the extra space placed alongside
+            the element as it is moved into position
+
+absolute => placed a specific coordinates within 
+            a parent container (behaves like float)
+
+fixed => does not move with scroll (absolute 
+         within browser window)
+
+Handling overflow
+
+Sometimes your content can exceed the height/width
+of the container (it can spill out)
+
+overflow: type;
+
+visible => tells browser to increase height of 
+            element to allow it to display
+
+hidden => cuts of excess content that would appear 
+          outside containing element
+
+scroll => keeps the element the natural, clips
+          content to the container size, adds 
+          scrollbars to edges of the container
+
+auto => is like scroll but only shows scroll bars 
+        when required
+
+Stacking Elements
+=> sometimes we want elements to overlap another
+   (such as a logo over a header banner)
+   (or text on top of an image)
+=> take both items out of the document flow 
+   and make occupy the same space in your browser
+   we use an index (z-index) to determine the 
+   order they appear (higher values on top)
+=> only works when elements are in the same 
+   container and are absolutely positioned
+
+Designing for mobile
+
+media = "device" <= print, all
+                 <= associated with a style sheets 
+                 <= will only load if your device 
+                    if of the type in the list
+
+Designing for smaller screens
+use @media rule
+
+@media (min-width:320px) and (max-width:480px) {
+   /* a style here gets applied if the screen 
+      width is between 320px and 480px and 
+      not applied if it isn't */
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 480px) {
+}
+
+/* Tablets */
+@media only screen and (min-width: 481px) {
+}
+
+/* Desktops */
+@media only screen and (min-width: 769px) {
+}
+
+Pulldown menu with CSS => see example
