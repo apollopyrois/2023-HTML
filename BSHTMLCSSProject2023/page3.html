@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">  
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>This is our website</title>
+</head>
+<body>
+  
+    <!--This is our navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light bg-silver">
+      <div class="container-fluid">
+        <a class="navbar-brand">TechTimes</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" href="#project">Open Source Vs. Propriety</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" href="page1.html">Science</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" href="page2.html">Technology</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link btn btn-primary" href="page3.html">Science and tech</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+
+    <div class="container mt-4">
+      <div class="row">
+          <!-- Left Section -->
+          <div class="col-md-5 mx-auto">
+              <section id="open-source-technology">
+                <h2><b><u>Open Source Software:</u></b></h2>
+                &nbsp;
+                <ul>
+                    <li><b>Cost-Effective:</b> Open source software is usually free to use, reducing costs for individuals and organizations.</li>
+                    &nbsp;
+                    <li><b>Community Support:</b> Large and active developer communities provide support and a wealth of knowledge.</li>
+                    &nbsp;
+                    <li><b>Customization:</b> Users have the freedom to modify the source code for high customization.</li>
+                    &nbsp;
+                    <li><b>Transparency:</b> Open source code provides visibility into how the software works, enhancing trust and security.</li>
+                    &nbsp;
+                    <li><b>Flexibility:</b> Users can choose from a variety of open source alternatives, fostering a diverse ecosystem.</li>
+                    &nbsp;
+                    <li><b>Security:</b> Community-driven development often results in rapid bug identification and fixes, contributing to strong security.</li>
+                    &nbsp;
+
+                </ul>            
+              </section>
+          </div>
+  
+          <!-- Right Section -->
+          <div class="col-md-5 mx-auto">
+              <section id="open-source-technology">
+                <h2><b><u>Proprietary/Enterprise Software:</u></b></h2>
+                <ul>
+                    <li><b>Professional Support:</b> Proprietary software often comes with dedicated customer support for prompt assistance.</li>
+                    &nbsp;
+                    <li><b>Ease of Use:</b> Proprietary software is designed with a user-friendly interface, making it accessible.</li>
+                    &nbsp;
+                    <li><b>Comprehensive Features:</b> Proprietary solutions may offer a comprehensive set of features and functionalities.</li>
+                    &nbsp;
+                    <li><b>Integration:</b> Proprietary software is designed to integrate seamlessly with other solutions from the same vendor.</li>
+                    &nbsp;
+                    <li><b>Stability:</b> Rigorous testing results in stable and reliable performance.</li>
+                    &nbsp;
+                    <li><b>Regular Updates:</b> Vendors release regular updates, including security patches and new features.</li>
+                    &nbsp;
+                    &nbsp;
+                </ul>
+              </section>
+          </div>
+      </div>
+  </div>
+<div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+  <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
+          id="bd-theme"
+          type="button"
+          aria-expanded="false"
+          data-bs-toggle="dropdown"
+          aria-label="Toggle theme (auto)">
+    <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
+    <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#sun-fill"></use></svg>
+        Light
+        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
+        Dark
+        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+      </button>
+    </li>
+    <li>
+      <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
+        <svg class="bi me-2 opacity-50 theme-icon" width="1em" height="1em"><use href="#circle-half"></use></svg>
+        Auto
+        <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
+      </button>
+    </li>
+  </ul>
+</div>
+
+  
+  <!-- <div class="pagination-container">
+    <ul class="pagination">
+    <li class="page-item">
+      <a class="page-link" href=""> |< </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link" href=""> |<< </a>
+    </li>
+    
+    <li class="page-item">
+      <a class="page-link" href=""> 1</a>
+    </li>
+  
+    <li class="page-item">
+      <a class="page-link" href=""> 2 </a>
+    </li>
+    
+    <li class="page-item">
+      <a class="page-link" href=""> 3 </a>
+    </li>
+  
+    <li class="page-item">
+      <a class="page-link" href=""> 4 </a>
+    </li>
+
+    </li>
+  
+    <li class="page-item">
+      <a class="page-link" href=""> >>| </a>
+    </li>
+  
+    <li class="page-item">
+      <a class="page-link" href=""> >| </a>
+    </li>
+  </ul> -->
+
+  
+   <div id="footer">
+    <footer>&copy - Webdev1000 Final project, 2023 - All right reserved, Intelectual property of Liam, Patrick, Zachary</footer>
+   </div>
+
+  
+
+</body>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+      <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

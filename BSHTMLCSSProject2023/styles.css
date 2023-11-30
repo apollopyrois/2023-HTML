@@ -1,0 +1,314 @@
+
+@import 'node_modules/bootstrap@5.3.2/scss/bootstrap';
+
+@media (max-width: 768px) {
+
+}
+  @media (min-width: 769px) and (max-width: 1024px) {
+    
+}
+  
+  @media (min-width: 1025px) {
+
+}
+
+@font-face {
+    font-family: templeos;
+    src: url(templeos_font.woff);
+}
+
+
+body {
+    font-family: 'templeos';
+    font-size: small;
+    background-image: url('TempleOS_logo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+
+.navbar {
+    font-family: 'templeos';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #06324F;
+    color: white;
+    z-index: 1000;
+}
+
+
+.navbar-brand {
+    color: #ffd500;
+    transition: color 0.6s;
+}
+
+.navbar-nav .nav-link {
+    color: #ffd500;
+    transition: color 0.6s;
+}
+
+.navbar-nav .nav-link:hover {
+    /* color: $accent-color;  */
+}
+
+
+ section {
+    font-family: 'templeos', cursive;
+    margin: 50px 15px;
+    color: #ffd500;
+    background-color: #06324F;
+    border-radius: 10px;
+    border: 800px;
+    radius: 10px;
+}
+
+.custom-image {
+    height: 200px;
+    width: auto;
+    transition: transform 0.3s; 
+
+    &:hover {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+}
+
+#home {
+    /* background-color: $accent-color; */
+    text-align: center;
+    padding: 20px;
+
+    h1 {
+        font-size: 2.5rem;
+        /*color: $custom-text-color;*/
+    }
+
+    p {
+        font-size: 1.5rem;
+        /*color: $custom-text-color;*/
+    }
+}
+
+#about {
+    font-family: 'templeos', cursive; 
+    /* background-color: $custom-bg; */
+    padding: 20px;
+    text-align: center;
+
+    h2 {
+        font-size: 2rem;
+        color: #000; 
+    }
+
+    .custom-image {
+        width: 150px;
+        height: 150px;
+        margin: 150px;
+        border: 2px solid $accent-color;
+    }
+}
+
+
+#project {
+    font-family: 'templeos', cursive; 
+    /* background-color: $body-bg; */
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+
+    h3 {
+        font-size: 1.8rem;
+        /*color: $accent-color;*/
+    }
+
+    .card {
+        margin: 100px;
+        padding: 5px;
+       /* border: 2px solid $accent-color; */
+        transition: transform 0.3s;
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+
+#contact {
+    font-family: 'templeos', cursive;
+    /* background-color: $body-bg; */
+    padding: 20px;
+    margin: 100px;
+
+    h1 {
+        font-size: 2rem;
+        /* color: $accent-color; */
+    }
+
+    form .form-control {
+        border: 2px solid;
+        /* color: $accent-color; */
+    }
+
+    form .btn-primary {
+        /* background-color: $accent-color; */
+        border: none;
+    }
+}
+
+
+/* footer {
+    font-family: 'templeos', cursive;
+    color: #fdc500;
+    text-align: center;
+    padding: 10px;
+    font-size: 1rem;
+    font-family: 'templeos', cursive;
+    margin: 50px 15px;
+    color: #ffd500;
+    background-color: #06324F;
+    border-radius: 10px;
+    border: 800px;
+    bottom: 0;
+} */
+#footer {
+    font-family: 'templeos', cursive;
+    font-size: 1rem;
+    text-align: center;
+    position: fixed;
+    color: #fdc500;
+    padding: 10px;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #06324F;
+    height: 40px;  /* Adjust the height */
+    border-radius: 10px;
+    margin: 50 15px;
+}
+
+
+#carouselExampleCaptions {
+    font-family: 'templeos', cursive;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+
+.carousel-control-prev, .carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 5%;
+    color: #000;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-image: none;
+    font-size: 2rem;
+}
+
+
+.carousel-caption h5, .carousel-caption h1 {
+    text-align: center;
+    color: #000; 
+}
+
+.carousel-caption p {
+    color: #000; 
+}
+
+
+.checkbox {
+    display: none;
+}
+
+.centered-text {
+    text-align: center;
+}
+
+.form-control {
+    width: 100%; 
+}
+
+#contact form {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; s
+}
+
+
+.pagination-container .pagination .page-link {
+    background-color: #06324F;
+    color: yellow;
+  }
+  
+  .pagination-container .pagination .page-link:hover {
+    background-color: #00509d;
+    color: #06324F;
+    border: 1px solid blue;
+  }
+
+
+.pagination-container {
+    text-align: center;
+  }
+  
+.pagination {
+    display: inline-block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+  }
+  
+  .page-item {
+    display: inline-block;
+    margin: 0 5px; 
+  }
+  
+  .page-link {
+    text-decoration: none; 
+    padding: 5px 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 3px; 
+  }
+  
+  .page-item.table-active .page-link {
+   
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+   .mb-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  
+  .mb-3 span {
+    font-size: 1.2em;
+  }
+
+  .radio-inline {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal-title, .modal-body, .modal-footer {
+    font-family: 'templeos', cursive;
+  }
+
+.btn-primary {
+    font-family: 'templeos', cursive;
+}
+
+h2, p {
+    text-align: center;
+}
